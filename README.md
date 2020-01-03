@@ -3,7 +3,7 @@ A Nodejs-Sequelize-Express based enpoint to get the schema of  database tables
 
 ## Quick Start
 ###### Note:
-Remember to specify the database, username and password in the config file or change completely the database connection
+Remember to specify the database, username and password in the config (**config.js**) file or change completely the database connection
 
 ```bash
 # Install dependencies
