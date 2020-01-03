@@ -1,0 +1,23 @@
+{
+   "id":"Identifiant",
+   "matricule":"Matricule",
+    "info_personne":"Information Personelle",
+   "champs_systeme":"Champs Systeme",
+   "grade":"Grade",
+    "manque":"Manque",
+    "description":"Description",
+    "categorie":"Categorie",
+    "nom":"Nom",
+    "contact":"Contact",
+    "id_type":"Identifian Type",
+    "id_vehicule":"Identifant Vehicule",
+    "id_provenance":"Identifiant Provenance",
+    "date_deliv":"Date de Deliverance",
+    "date_expir":"Date d'Expiration",
+    "id_controlleur":"Identifiant Controlleur",
+    "libelle":"Libelle",
+    "est_renouvelable":"Est Renouvelable",
+    "immat":"IMMAT",
+    "id_model":"Identifiant Model"
+
+}
