@@ -2,13 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 const sequelize = require('./config')
 
-// Author routes
-
-// Get All Authors
-// route author/all
+//structure d'un table
 router.get('/:table', (req, res) => {
     let {table} = req.params;
         sequelize
@@ -26,6 +22,27 @@ router.get('/:table', (req, res) => {
             })
 
 })
+
+//structure of all tables
+router.get('/', (req, res) => {
+      const arr = []
+        sequelize
+            .query('SHOW Tables', {
+                type: sequelize.QueryTypes.SHOWTABLES
+            })
+            .then(result => {
+                result.forEach((elt,index) => {
+                    sequelize.query("SHOW COLUMNS FROM "+elt)
+                        .then(data => {
+                            arr.push(data[0])
+                            if(index == result.length-1){
+                                res.json(arr)
+                            }    
+                        })   
+                });
+            })
+})
+  
   
 
 module.exports = router;
